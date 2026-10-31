@@ -1,0 +1,9 @@
+.occ/
+*.test
+coverage.out
+__pycache__/
+.venv/
+.DS_Store
+*.pid
+*.log
+*.lock

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>OCC · Live transactions</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<header><div class="brand">OCC <span>/ LIVE TRANSACTIONS</span></div><span id="connection">連線中…</span></header>
+<form class="toolbar" id="launch" aria-label="交易設定">
+<label>平行 requests <input id="count" type="number" min="1" max="32" value="4" required></label>
+<label>操作 <select id="operation"><option value="write">讀取後 +1</option><option value="read">只讀取</option></select></label>
+<label>分布 <select id="distribution"><option value="same">同一 target</option><option value="spread">分散至 8 個 target</option></select></label>
+<label>起始 target <select id="target"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></label>
+<label>運算 ms <input id="work" type="number" min="0" max="2000" value="600" required></label>
+<div class="actions"><button type="submit" class="primary" id="batch">啟動平行交易</button><button type="button" id="add">＋ 加入 1 個</button></div>
+</form>
+<p id="error" role="alert" hidden></p>
+<div class="view-controls"><button id="live" class="primary">即時追蹤</button><button id="play">▶ 播放</button><button id="pause">暫停畫面</button><label>播放速度 <select id="speed"><option value="0.1">0.1×</option><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label><button id="step">下一事件 →</button><label><input id="follow" type="checkbox" checked>跟隨時間與新交易</label><span id="summary">尚未加入交易</span></div>
+<div class="workspace"><section class="timeline-panel"><div class="section-head"><div><h1>交易時間軸</h1><p>每個 request 呼叫一次 OCC；衝突重試會產生新的 txn。暫停畫面不會停止後端。</p></div><span id="clock">0.0s</span></div><div class="legend"><span class="reading">● 讀取／私有運算</span><span class="validating">● 驗證中</span><span class="writing">● 提交中</span><span class="done">● 已完成</span><span class="conflict">× 衝突終止</span></div><div class="scroll" id="scroll"><div id="timeline"><div id="ruler"></div><div id="rows"></div><div id="cursor"><span>NOW</span></div></div></div><div class="scrubber"><label for="seek">回看</label><input id="seek" type="range" min="0" max="1" step="any" value="0"></div><p class="event" id="event" aria-live="polite">設定參數後啟動交易，或直接加入 1 個。</p><p class="hint">橫軸是真實經過秒數；R／V／W 標籤是 OCC 的邏輯時間戳。點選交易可看完整 ID、集合及阻擋來源。</p></section>
+<aside><section><h2>ONGOING <span id="ongoing-count">0</span></h2><p>開始讀取後，直到 Run attempt 結束。</p><div id="ongoing" class="chips"></div></section><section><h2>PREV TXNS <span id="prev-count">0</span></h2><p>已登錄驗證的交易，包含提交中與保留的完成紀錄。</p><div id="prev" class="chips"></div></section><section><h2>磁碟資料 · 最新狀態</h2><div id="data" class="data">—</div><p id="data-note">所有 request 結束後讀取，避免展示未驗證的中間值。</p></section><section><h2>交易詳情 <span id="selected"></span></h2><div id="detail">點選時間軸上的交易。</div></section></aside></div>
+<footer><span>真實 Go OCC · 每個 target +1 · 固定 200ms 寫入延遲 · 最多重試 16 次</span><span>每次啟動最多 128 requests；重新啟動伺服器可清空。</span></footer>
+</main><script type="module" src="app.mjs"></script></body></html>

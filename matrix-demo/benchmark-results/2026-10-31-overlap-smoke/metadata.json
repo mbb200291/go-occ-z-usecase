@@ -1,0 +1,48 @@
+{
+  "actual_overlap": [
+    0.131905852226952,
+    0.2735122600202286,
+    0.5912657010216975,
+    0.9015596855593302
+  ],
+  "arch": "arm64",
+  "baseline": "same OCC Manager with one worker",
+  "cache": "all targets read before timing; no cold-cache claim",
+  "coverage": [
+    0.0078125,
+    0.01171875,
+    0.01953125,
+    0.03125
+  ],
+  "cpu_count": 10,
+  "created": "2026-10-31T16:20:52+08:00",
+  "go": "go1.27.1",
+  "gomaxprocs": 10,
+  "heatmap_metric": "normalized_time_difference",
+  "jitter": true,
+  "journal": "disk for BOTH backends",
+  "max_retries": 4,
+  "n": 16,
+  "os": "darwin",
+  "output": "/Users/linbangqi/go-occ-z/.worktrees/matrix-demo/benchmark-results/2026-10-31-overlap-smoke",
+  "read_parts": [
+    10,
+    5,
+    0
+  ],
+  "repeats": 1,
+  "requested_overlap": [
+    0.1,
+    0.3,
+    0.6,
+    0.9
+  ],
+  "requests": 10,
+  "seed": 42,
+  "statistic": "median sequential seconds / median parallel seconds",
+  "target_layout": "file: one file per cell; memory: atomic cell array",
+  "timing": "worker dispatch through all Run returns; excludes setup, verification, final cleanup wait",
+  "warmups": 0,
+  "work_delay": "10ms",
+  "workers": 10
+}

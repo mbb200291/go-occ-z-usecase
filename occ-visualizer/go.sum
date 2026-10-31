@@ -1,0 +1,14 @@
+github.com/gofrs/flock v0.13.1 h1:jjREztyBeSKBZYAC+mgc1laB+xsgy4kYMf3FbKF2UBo=
+github.com/gofrs/flock v0.13.1/go.mod h1:sf4BFiHwnvgxa25DlQoDqXQnwRMEOwqxRq37P6MzzmE=
+github.com/mbb200291/go-occ-z v0.1.0-observe.1 h1:Zz+I13lr1QUJfZc92cumGA4EetNCrR/XEheL76Lq7BY=
+github.com/mbb200291/go-occ-z v0.1.0-observe.1/go.mod h1:JtSZUNudHq6NA8hN3oN263LrHz/aJHsPmA101MkrU2E=
+github.com/stretchr/testify v1.12.1 h1:EuwCh5fleGS7H32xRwO3wRGT7DxrDhLAT6FF8MpWDWE=
+github.com/stretchr/testify v1.12.1/go.mod h1:MDEgiDPPsNp5cuIrHPPCyornHKgEVbtFUmoNlxoYthg=
+github.com/zhangyunhao116/fastrand v0.3.0 h1:7bwe124xcckPulX6fxtr2lFdO2KQqaefdtbk+mqO/Ig=
+github.com/zhangyunhao116/fastrand v0.3.0/go.mod h1:0v5KgHho0VE6HU192HnY15de/oDS8UrbBChIFjIhBtc=
+github.com/zhangyunhao116/skipmap v0.10.1 h1:CMH4yGZQESBM1kUNozQqQ+Ra2pKqwF3HxaTADOaIfPs=
+github.com/zhangyunhao116/skipmap v0.10.1/go.mod h1:CClnLPHl3DI+hHgrcy0OZ/QJ45AWgA3ObVcQyJop12c=
+go.yaml.in/yaml/v3 v3.0.5 h1:N6y/pJk8buWs9NY5ERU2HSMfm+IuD/OtfdAnq6kESPw=
+go.yaml.in/yaml/v3 v3.0.5/go.mod h1:HVTZu1O7/Vkt2N+BFy8Zza+lnLsABggaTM2ZpNIGuKg=
+golang.org/x/sys v0.47.0 h1:o7XGOvZQCADBQQ4Y7VNq2dRWQR7JmOUW8Kxx4ZsNgWs=
+golang.org/x/sys v0.47.0/go.mod h1:4GL1E5IUh+htKOUEOaiffhrAeqysfVGipDYzABqnCmw=
